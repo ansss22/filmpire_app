@@ -9,7 +9,6 @@ const FeaturedMovie = ({ movie }) => {
 
     if (!movie) return null;
 
-    // console.log('movie',movie);
     return (
         <Box component={Link} to={`/movie/${movie.id}`} className={classes.featuredCardContainer}>
             <Card className={classes.card} classes={{ root: classes.cardRoot }}>

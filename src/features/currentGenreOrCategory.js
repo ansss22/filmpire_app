@@ -9,12 +9,12 @@ export const genreOrCategory = createSlice({
     },
     reducers: {
         selectGenreOrCategory: (state, action) => {
-            // console.log(action.payload);
+          
             state.genreIdOrCategoryName = action.payload;
             state.searchQuery = '';
         },
         searchMovie: (state, action) =>{
-            // console.log("searchMovie feature: ", action.payload);
+           
             state.searchQuery = action.payload;
         },
     },

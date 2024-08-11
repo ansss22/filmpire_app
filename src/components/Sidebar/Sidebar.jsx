@@ -37,7 +37,7 @@ const Sidebar = ({ setMobileOpen }) => {
   const { genreIdOrCategoryName } = useSelector(
     (state) => state.currentGenreOrCategory
   );
-  // console.log(genreIdOrCategoryName);
+  
 
   if (error) return "An error has occured.";
 
