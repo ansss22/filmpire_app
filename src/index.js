@@ -1,14 +1,20 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { createRoot } from 'react-dom/client'; 
+import { Provider } from 'react-redux';
 
 import App from './components/App';
+import store from './app/store';
+import './index.css'
+import ToggleColorModeProvider from './utils/ToggleColorMode';
 
-
-const root = createRoot(document.getElementById('root'));
-
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+ReactDOM.render(
+  <Provider store={store}>
+    <ToggleColorModeProvider>
+      <BrowserRouter basename="/filmpire">
+        <App />
+      </BrowserRouter>
+    </ToggleColorModeProvider>
+  </Provider>,
+  document.getElementById('root'),
 );
